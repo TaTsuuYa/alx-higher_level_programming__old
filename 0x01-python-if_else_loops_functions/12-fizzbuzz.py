@@ -8,5 +8,7 @@ def fizzbuzz():
             print("Buzz" , end="")
         elif i % 3 == 0:
             print("Fizz", end="")
+        else:
+            print(i, end="")
         print(" ")
     print()
