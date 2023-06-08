@@ -8,7 +8,7 @@ if __name__ == "__main__":
     op = argv[2]
     b = int(argv[3])
     if argc != 4:
-        print("Usage: {} <a> <operator> <b>".format(argv[0]))
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
 
     if op == '+':
