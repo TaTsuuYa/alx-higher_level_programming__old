@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    if matrix != [[]]:
+    if matrix == [[]]:
+        print()
+    else:
         for lst in matrix:
             lstlen = len(lst)
             for i in range(lstlen):
