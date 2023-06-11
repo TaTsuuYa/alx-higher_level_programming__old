@@ -18,6 +18,8 @@ int is_palindrome(listint_t **head)
 	if (*head == NULL)
 		return (1);
 
+	current_node = *head;
+
 	len = listintlen(head);
 	if (len % 2 != 0)
 		return (0);
@@ -26,7 +28,7 @@ int is_palindrome(listint_t **head)
 	if (nlist == NULL)
 		return (0);
 
-	for (i = 0; i < len / 2; i++)
+	for (i = 0; i < len; i++)
 	{
 		nlist[i] = current_node->n;
 		current_node = current_node->next;
@@ -34,8 +36,11 @@ int is_palindrome(listint_t **head)
 
 	for (i = 0; i < len / 2; i++)
 		if (nlist[i] != nlist[(len - 1) - i])
+		{
+			free(nlist);
 			return (0);
-
+		}
+	free(nlist);
 	return (1);
 }
 
