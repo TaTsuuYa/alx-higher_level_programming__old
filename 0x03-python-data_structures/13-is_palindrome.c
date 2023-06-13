@@ -21,7 +21,7 @@ int is_palindrome(listint_t **head)
 	current_node = *head;
 	len = listintlen(head);
 
-	nlist = malloc(sizeof(int *) * len);
+	nlist = malloc(sizeof(int) * len);
 	if (nlist == NULL)
 		return (0);
 
