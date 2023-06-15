@@ -15,13 +15,34 @@ def roman_to_int(roman_string):
     if not roman_string or not isinstance(roman_string, str):
         return 0
     n = 0
-    for i in range(len(roman_string)):
-        if roman_string[i] not in rom:
-            return 0
-        if i < len(roman_string) - 1:
-            if roman_string[i] < roman_string[i + 1]:
-                n += rom[roman_string[i + 1]] - rom[roman_string[i]]
-                i += 1
+    sp = 2
+    split_rom = [roman_string[i: i + sp]
+                 for i in range(0, len(roman_string), sp)]
+    for i in split_rom:
+        if len(i) != sp:
+            n += rom[i[0]]
+        else:
+            if i[0] not in rom or i[1] not in rom:
+                return 0
+
+            if rom[i[0]] < rom[i[1]]:
+                n += rom[i[1]] - rom[i[0]]
             else:
-                n += rom[roman_string[i]]
+                n += rom[i[0]] + rom[i[1]]
     return n
+
+
+roman_number = "X"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "VII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "IX"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "LXXXVII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "DCCVII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
