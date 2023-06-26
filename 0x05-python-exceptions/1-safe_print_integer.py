@@ -2,7 +2,7 @@
 
 
 def safe_print_integer(value):
-    if not value:
+    if value == None:
         return False
 
     try:
