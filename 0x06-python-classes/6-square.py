@@ -6,9 +6,9 @@ class Square:
     """This is a square"""
 
     def __init__(self, size=0, position=(0, 0)):
-        """initializing the square"""
-        self.__size = size
-        self.__position = position
+        """Initializing the square"""
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
