@@ -5,12 +5,26 @@
 
 
 class Rectangle:
-    """This is a rectangle class"""
+    """
+    This is a rectangle class
+
+    Attributes:
+        number_of_instances (int): number of current instances
+        print_symbol (any): symbol for string representation
+    """
 
     number_of_instances = 0
     print_symbol = '#'
 
     def __init__(self, width=0, height=0):
+        """
+        Initializing a Rectangle
+
+        Args:
+            width (int): width of the rectangle
+            height (int): height of the rectangle
+        """
+
         self.height = height
         self.width = width
 
@@ -18,10 +32,18 @@ class Rectangle:
 
     @property
     def width(self):
+        """Get width"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """
+        Set width
+
+        Raises:
+            TypeError: if value is not an int
+            ValueError: if value is less than 0
+        """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -30,10 +52,18 @@ class Rectangle:
 
     @property
     def height(self):
+        """Get height"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """
+        Set height
+
+        Raises:
+            TypeError: if value is not an int
+            ValueError: if value is less than 0
+        """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -52,10 +82,12 @@ class Rectangle:
 
     @classmethod
     def increment_number_of_instances(cls):
+        """Increments the number of instances"""
         cls.number_of_instances += 1
 
     @classmethod
     def decrement_number_of_instances(cls):
+        """Decrements the number of instances"""
         cls.number_of_instances -= 1
 
     def __str__(self):
@@ -79,7 +111,15 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        """Returns the biggest rectangle"""
+        """
+        Returns the biggest rectangle
+
+        Args:
+            rect_1 (Rectangle): rectangle object
+            rect_2 (Rectangle): rectangle object
+        Raises:
+            TypeError: if either objects is not a Rectangle
+        """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
@@ -90,5 +130,14 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """Returns a square"""
+        """
+        Returns a square
+
+        Args:
+            size (int): the width and height of the rectangle
+        Raises:
+            TypeError: if size is not an int
+        """
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
         return cls(size, size)
