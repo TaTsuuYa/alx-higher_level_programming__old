@@ -5,7 +5,13 @@
 
 
 def add_integer(a, b=98):
-    """Adds two integers"""
+    """
+    Adds two integers
+
+    Args:
+        a (int): first number
+        b (int): second number
+    """
 
     if not isinstance(a, int):
         raise TypeError("a must be an integer")
