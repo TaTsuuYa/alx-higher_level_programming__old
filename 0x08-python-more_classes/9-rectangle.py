@@ -25,8 +25,8 @@ class Rectangle:
             height (int): height of the rectangle
         """
 
-        self.height = height
         self.width = width
+        self.height = height
 
         self.increment_number_of_instances()
 
@@ -135,11 +135,5 @@ class Rectangle:
 
         Args:
             size (int): the width and height of the rectangle
-        Raises:
-            TypeError: if size is not an int
         """
-        if not isinstance(size, int):
-            raise TypeError("width must be an integer")
-        if size < 0:
-            raise ValueError("width must be >= 0")
         return cls(size, size)
