@@ -15,4 +15,4 @@ class TestMaxInt(unittest.TestCase):
         self.assertEqual(max_integer([-4, 1, 2, 3]), 3)
         self.assertEqual(max_integer([-12, -7, 0]), 0)
 
-        self.assertRaises(TypeError, )
+        self.assertRaises(TypeError, max_integer, 12)
