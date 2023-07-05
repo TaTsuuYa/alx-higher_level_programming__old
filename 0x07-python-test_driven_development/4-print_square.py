@@ -21,4 +21,4 @@ def print_square(size):
         rec = ""
         for y in range(size):
             rec += ("#" * size) + ('\n' if y < size - 1 else '')
-            print(rec)
+        print(rec)
