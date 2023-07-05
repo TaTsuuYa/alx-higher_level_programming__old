@@ -33,7 +33,7 @@ def matrix_divided(matrix, div):
                 "matrix must be a matrix (list of lists) of integers/floats")
         for n in lst:
             if not (isinstance(n, int) or isinstance(n, float)):
-                msg = "matrix must be a matrix (list of lists)"\
+                msg = "matrix must be a matrix (list of lists)" +
                 "of integers/floats"
                 raise TypeError(msg)
 
