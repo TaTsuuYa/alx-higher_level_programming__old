@@ -5,6 +5,13 @@
 
 
 def text_indentation(text):
+    """
+    Formats text
+
+    Args:
+        text (str): the text getting formatted
+    """
+
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
