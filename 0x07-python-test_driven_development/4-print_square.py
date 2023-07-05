@@ -12,7 +12,7 @@ def print_square(size):
         raise ValueError("size must be >= 0")
 
     if size == 0:
-        print('\n')
+        print()
         return
 
     rec = ""
