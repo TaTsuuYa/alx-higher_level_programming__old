@@ -5,6 +5,9 @@
 
 
 def say_my_name(first_name, last_name=""):
+    """
+    Self introduction
+    """
     if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
 
