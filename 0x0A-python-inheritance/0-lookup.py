@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 
-def lookup(obj: object):
+def lookup(obj):
     """
     Returns a list of object attributes and methods.
 
