@@ -17,3 +17,7 @@ class Student:
             if i in self.__dict__.keys():
                 dic[i] = self.__dict__[i]
         return dic
+
+    def reload_from_json(self, json):
+        for i in json.keys():
+            self.__dict__[i] = json[i]
