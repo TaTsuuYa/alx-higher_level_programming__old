@@ -1,0 +1,17 @@
+#!/usr/bin/python3
+"""6. Create object from a JSON file"""
+import json
+
+
+def load_from_json_file(filename):
+    """
+    Creates an object from a string
+
+    Args:
+        filename (str): name of the file
+
+    Returns:
+        object
+    """
+    with open(filename, encoding="utf-8") as f:
+        return json.load(f)
