@@ -3,13 +3,13 @@
 
 
 def class_to_json(obj):
-	"""
-	Returns the dict of an object
+    """
+    Returns the dict of an object
 
-	Args:
-		obj (object): the object
+    Args:
+        obj (object): the object
 
-	Returns:
-		dict
-	"""
-	return obj.__dict__
+    Returns:
+        dict
+    """
+    return obj.__dict__
