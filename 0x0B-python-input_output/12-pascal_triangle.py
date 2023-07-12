@@ -18,6 +18,3 @@ def pascal_triangle(n):
             except IndexError:
                 pass
     return pas
-
-
-print(pascal_triangle(4))
