@@ -3,6 +3,15 @@
 
 
 def pascal_triangle(n):
+    """
+    Returns pascals triangle
+
+    Args:
+        n (int): triangle hight
+
+    Returns:
+        (list) a matrix containing the pascal triangle of n
+    """
     if n <= 0:
         return []
 
