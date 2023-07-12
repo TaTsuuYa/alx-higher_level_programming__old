@@ -7,40 +7,17 @@ adds arguments to the lists
 and save it back to the json file
 """
 from sys import argv
-import json
 
+if __name__ == "__main__":
+    save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+    load_from_json_file = \
+        __import__('6-load_from_json_file').load_from_json_file
 
-def save_to_json_file(my_obj, filename):
-    """
-    Saves an object to a file
+    filename = "add_item.json"
 
-    Args:
-        my_obj (object): the saved object
-        filename (str)L name of the file
-    """
-    with open(filename, 'w', encoding="utf-8") as f:
-        json.dump(my_obj, f)
-
-
-def load_from_json_file(filename):
-    """
-    Creates an object from a string
-
-    Args:
-        filename (str): name of the file
-
-    Returns:
-        object
-    """
-    with open(filename, encoding="utf-8") as f:
-        return json.load(f)
-
-
-filename = "add_item.json"
-
-try:
-    data = load_from_json_file(filename)
-except FileNotFoundError:
-    data = []
-data += argv[1:]
-save_to_json_file(data, filename)
+    try:
+        data = load_from_json_file(filename)
+    except FileNotFoundError:
+        data = []
+    data += argv[1:]
+    save_to_json_file(data, filename)
