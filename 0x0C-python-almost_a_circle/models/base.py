@@ -8,6 +8,7 @@
 """
 from json import dumps, loads
 
+
 class Base:
     """
     The base class for the upcoming tasks
@@ -63,7 +64,7 @@ class Base:
             dummy = cls(1, 1)
         if cls.__name__ == "Square":
             dummy = cls(1)
-        
+
         dummy.update(**dictionary)
         return dummy
 
